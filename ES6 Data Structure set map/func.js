@@ -120,3 +120,32 @@ function factorial(fac) {
     return fac * factorial(fac - 1);
 }
 console.log(factorial(5));
+
+
+
+// type of error: 
+//Syntax error,referrence Error, type Error , Range error
+
+function division(a, b) {
+    if (b === 0) {
+        // throw "second parameter can't be Zero"; //custom error message
+        throw new Error("second parameter can't be Zero"); // best practice ,error object throw
+
+    }
+    return a / b;
+}
+
+
+
+try {
+    //error testing
+    division(4, 0)
+
+} catch (e) {
+    //it works when error object find 
+    console.log(e);
+
+} finally {
+    // always worked wheather error find or not
+    console.log("FInally works Firally")
+}
