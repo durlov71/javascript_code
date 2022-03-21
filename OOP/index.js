@@ -22,7 +22,7 @@
 
 const user = (name, age) => {
     const userObj = {
-        name: name,
+        name: name, //according to es6 feature when key & value same we can write only key name like name, age,
         age: age,
         walk: function() {
             console.log("He is walking")
@@ -35,3 +35,17 @@ const user2 = user("kanto", 27);
 
 console.log(user1)
 console.log(user2)
+
+
+// <.................Constructor Functions..................>
+
+const User = function(name, age) {
+    this.name = name,
+        this.age = age,
+        this.walk = function() {
+            console.log("started walking")
+        }
+
+}
+const user8 = new User("john", 35);
+console.log(user8);
