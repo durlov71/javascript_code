@@ -66,3 +66,4 @@ console.log(wm.get(obj1)); // print value of the obj1
 
 wm.delete(obj1);
 console.log(wm.has(obj1));
+//here we can't use clear method like set and map method.
