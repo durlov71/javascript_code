@@ -18,7 +18,7 @@
 // console.log(result);
 
 // console.log('After');
-
+-
 
 
 //.................CALLBACK...................................................
@@ -43,7 +43,7 @@
 // }
 
 
-// sending mail callback
+//................................................................................... sending mail callback
 
 fechUser(123, function(user) {
     console.log(user);
@@ -54,7 +54,7 @@ fechUser(123, function(user) {
 
 function sendMail(userMail, callback) {
     setTimeout(function() {
-        console.log("sending email to user.....");
+        console.log(`sending mail to: ${userMail}`);
         const response = { success: true }
         callback(response);
     }, 2000);
@@ -76,3 +76,38 @@ function fechUser(userID, callback) {
     }, 2000);
 
 }
+
+
+
+//......................................................................PRACTICE................................
+
+// fetchUser(123, function(user) {
+//     console.log(user);
+
+//     sendMail(user.email, function(response) {
+//         console.log(response)
+//     });
+// });
+
+
+
+// function sendMail(user, callback) {
+//     setTimeout(function() {
+
+//         console.log("sending email admin to user");
+//         const response = user.email = true;
+//         callback(response)
+//     }, 2000);
+
+// }
+
+// function fetchUser(userId, callback) {
+//     setTimeout(function() {
+//         const fetchedUser = {
+//             id: userId,
+//             name: 'mafia',
+//             email: 'mafia@gmail.com',
+//         }
+//         callback(fetchedUser)
+//     }, 2000)
+// }
